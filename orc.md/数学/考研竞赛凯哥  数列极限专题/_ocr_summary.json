@@ -1,0 +1,20 @@
+{
+  "task": "shulie",
+  "pdf": "考研竞赛凯哥老旧讲义\\番外篇-数列极限考前大总结-凯哥.pdf",
+  "model": "qwen3.7-plus",
+  "dpi": 200,
+  "total_pages": 6,
+  "content_range": "1-6",
+  "processed": 6,
+  "success": 3,
+  "skipped": [
+    1,
+    2,
+    3
+  ],
+  "failed": [],
+  "total_tokens_in": 10140,
+  "total_tokens_out": 10468,
+  "estimated_cost_yuan": 0.11,
+  "total_time_seconds": 187.8
+}

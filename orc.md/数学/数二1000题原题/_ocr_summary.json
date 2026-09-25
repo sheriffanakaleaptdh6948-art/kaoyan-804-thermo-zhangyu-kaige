@@ -1,0 +1,14 @@
+{
+  "pdf": "03.【2027考研数学】张宇等启航专属班！\\00.书籍扫描\\2027张宇1000题 数二\\27张宇1000题数二【试题册】.pdf",
+  "model": "qwen3.7-plus",
+  "dpi": 200,
+  "total_pages": 138,
+  "content_range": "65-138",
+  "processed": 74,
+  "success": 74,
+  "failed": [],
+  "total_tokens_in": 257964,
+  "total_tokens_out": 279121,
+  "estimated_cost_yuan": 2.86,
+  "total_time_seconds": 4930.3
+}

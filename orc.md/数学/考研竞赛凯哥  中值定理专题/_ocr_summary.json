@@ -1,0 +1,20 @@
+{
+  "task": "zhizhi",
+  "pdf": "考研竞赛凯哥老旧讲义\\考研竞赛凯哥-高数习题解析-B站专属.pdf",
+  "model": "qwen3.7-plus",
+  "dpi": 200,
+  "total_pages": 76,
+  "content_range": "21-44",
+  "processed": 24,
+  "success": 21,
+  "skipped": [
+    21,
+    22,
+    23
+  ],
+  "failed": [],
+  "total_tokens_in": 71274,
+  "total_tokens_out": 109907,
+  "estimated_cost_yuan": 1.02,
+  "total_time_seconds": 1928.6
+}

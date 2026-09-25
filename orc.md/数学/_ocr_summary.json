@@ -1,0 +1,14 @@
+{
+  "pdf": "03.【2027考研数学】张宇等启航专属班！\\27张宇基础30讲（高数）.pdf",
+  "model": "qwen3.7-plus",
+  "dpi": 200,
+  "total_pages": 586,
+  "content_range": "552-584",
+  "processed": 33,
+  "success": 33,
+  "failed": [],
+  "total_tokens_in": 110913,
+  "total_tokens_out": 96237,
+  "estimated_cost_yuan": 1.06,
+  "total_time_seconds": 1718.9
+}
