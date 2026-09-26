@@ -110,6 +110,25 @@
 | 2026 年全国硕士研究生招生章程 | 官方 | `海大/2026招生章程.md` |
 | 2026 年硕士研究生招生专业目录 | 官方 | `海大/2026招生专业目录.md` |
 
+### 2.6 英语 RAG 向量库（单词 + 真题）
+
+| 资料 | 内容 | 规模 | 产出路径 |
+|---|---|:--:|---|
+| **英语 · 单词 RAG** | 红宝书 × 牛津 双源词汇 | 6550 条 | `rag/英语二/rag_db/`（collection `kaoyan_knowledge`，`type=vocab`） |
+| **英语 · 真题 RAG** | 考研英语一 2010–2024 阅读 | 360 条 | 同上（`type=exam_question` 300 + `type=exam_passage` 60） |
+
+> **已建好的 ChromaDB 向量库**，clone 下来即可检索，不需要重新向量化。
+> collection `kaoyan_knowledge`，384 维，embedding 模型 `paraphrase-multilingual-MiniLM-L12-v2`
+> （查询时要用**同一个模型**编码 query）。
+>
+> **硬约束：必须放在纯 ASCII 路径下使用。** chromadb 的 Rust 后端打不开含中文路径下的
+> HNSW 索引文件，会报 `Error loading hnsw index`（实测：同一份库在纯 ASCII 路径正常、
+> 在含中文路径必失败）。clone 到中文目录后请先把 `rag_db/` 拷到纯英文路径。
+>
+> **不含**：完形 / 新题型 / 写作 / 贴吧四个库；逐题解析（`exam_strategy`）**不在库内**；
+> 构建脚本与源 JSONL 未包含 —— 因此**只能检索、不能重建**。
+> 详见 `rag/英语二/README.md`。
+
 ---
 
 ## 三、目录结构
@@ -124,6 +143,11 @@ orc.md/                    书本 OCR 产出（逐页 pXXX.md，三位补零）
 
 TTS.md/                    视频逐字稿
 └── 数学/                  张宇基础30讲 第1-8讲 + 第13、14讲（72 个视频，缺 9-12 讲）
+
+rag/                       英语 RAG 向量库（ChromaDB，已建好）
+└── 英语二/
+    ├── README.md          用法 + 字段说明 + 「不能用中文路径」警告
+    └── rag_db/            单词 6550 + 真题 360（collection kaoyan_knowledge）
 
 海大/                      大连海事大学官方文件（考纲/章程/专业目录）
 
